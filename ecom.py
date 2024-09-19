@@ -1,6 +1,12 @@
 #Mini-Project:E-commerce API
 import re
 import json
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:your_password@localhost/fitness_center_db'
+db = SQLAlchemy(app)
 
 #Function to display menu
 def display_menu():
